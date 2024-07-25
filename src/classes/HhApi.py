@@ -7,7 +7,7 @@ class HhApi:
     def __init__(self):
         # Идентификаторы компаний, которые я выбрала
         self.employer_ids = ['2791002', '3529', '6067730', '2625279',
-                             '916364', '10413982', '2254473',
+                             '916364', '10413982', '18239',
                              '658279', '9329536', '1282414']
         # Заголовки запросов.
         self.__headers = {'User-Agent': 'HH-User-Agent'}
@@ -15,7 +15,8 @@ class HhApi:
         self.__params = {
             'page': 0,
             'per_page': 20,
-            'only_with_vacancies': True
+            'only_with_vacancies': True,
+            'locales': 'RU'
         }
 
     def request_info(self, url: str, employer_id: str) -> list:
